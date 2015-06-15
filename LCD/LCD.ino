@@ -1,3 +1,17 @@
+/*
+==================================================================
+
+ The circuit:
+
+ * LCD GND -> Arduino GND
+ * LCD VCC -> Arduino 5V
+ * LCD SDA -> Arduino SDA 20
+ * LCD SCL -> Arduino SCL 21
+
+==================================================================
+*/
+
+
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 
@@ -8,7 +22,7 @@ void setup()
 {
   lcd.init();
   lcd.backlight();
-  lcd.print("gvizdyk.org.ua2");
+  lcd.print("gvizdyk.org.ua!");
 }
 
 void loop()
@@ -16,3 +30,4 @@ void loop()
   lcd.setCursor(0, 1);
   lcd.print(millis()/120);
 }
+
